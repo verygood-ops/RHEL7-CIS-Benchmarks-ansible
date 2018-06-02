@@ -41,10 +41,10 @@
         state: started
 
     always:
-      - name: Cleanup docker container
-        docker_container:
-          name: "{{ docker_container_name }}"
-          state: absent
+    #   - name: Cleanup docker container
+    #     docker_container:
+    #       name: "{{ docker_container_name }}"
+    #       state: absent
 
       - name: Cleanup temp directory
         file:

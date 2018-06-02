@@ -7,6 +7,9 @@ symlink-role:
 
 test: symlink-role syntax test-ansible-2.0.2 test-ansible-2.1.3 test-ansible-2.2
 
+go: cd tests && ansible-playbook -i localhost, --e \"cis_level_1_exclusions=['3.2.8','5.3.4']\" (ANSIBLE_CONTAINER_PLAYBOOK_FILE)" --check
+ 
+
 test-ansible-2.0.2:
 	cd tests && ansible-playbook -i localhost, $(ANSIBLE_CONTAINER_PLAYBOOK_FILE) --e "test_ansible_version=2.0.2"
 
@@ -21,3 +24,4 @@ syntax:
 
 review:
 	git ls-files | xargs ansible-review -c tests/ansible-review/config.ini
+
