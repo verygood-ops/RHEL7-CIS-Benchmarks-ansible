@@ -6,4 +6,5 @@
   become: yes
 
   roles:
-    - anthcourtney.cis-amazon-linux
+    - cis-fedora28-linux
+ 
