@@ -1,6 +1,8 @@
 # RHEL7 CIS Benchmark role
 #### Security and operationaly harden RHEL and Fedora19+ via CIS benchmark Guidance
 
+**Warning: This is very much a work in progress - Do not use this in a production capacity**
+
 
 cd tests && ansible-playbook -i localhost, --e \"cis_level_1_exclusions=['3.2.8','5.3.4']\" playbook.yml --check
 
